@@ -1,0 +1,41 @@
+---
+title: 'Course Project: Shiny Application and Reproducible Pitch'
+author: "Han Zhao"
+date: "5/12/2017"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+This was built as part of a deliverable for the course Developing **Data Products** as part of the Coursera **Data Science Specialization**.
+
+The app developed for the first part of the assignment demo is avalilable at: <https://hanzhao.shinyapps.io/myapp001/>.
+
+Source code for ui.R and server.R files are available on the GitHub repo: <https://github.com/hanzhaoui/project3>.
+
+## Web Application Functionality
+
+- This app is based on the airquality data set. It utilizes the linear regression model (lm) to fit of the Ozone vs.Temperature datapoints. The Slope and Intersect 
+- The user can select the month(s) of interest on the side panel.
+- The user can also select of data points of interest on the plot.
+
+## Airquality Data Set
+The data used in the app comes from the New York Air Quality Measurements (airquality) dataset. Let has a look on the airquality's summary
+```{r plot1}
+data("airquality")
+summary(airquality)
+```
+
+## Snapshot of the App
+Here is the snapshot of the web app. 
+```{r, echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("/Users/HanZhao/testdir/rproduct/project3/image.png")
+ grid.raster(img)
+```
+
